@@ -9,7 +9,7 @@ int main()
 	scanf("%s",name);
 	printf("What is your favorite color?");
 	scanf("%s",color);
-	printf("%s's favorite color is %s\n",name,color);
+	printf("%s's favorite color is %s\n",name,"blue");
 	return(0);
 }
 
