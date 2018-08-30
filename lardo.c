@@ -11,9 +11,9 @@ int main()
 	w=atoi(weight);
 
 	printf("Here is what you weigh now: %d\n",w);
-	w=w+1;
+	w++;
 	printf("Your weight after the potatoes: %d\n",w);
-	w=w+1;
+	w++;
 	printf("Here you are after the mutton: %d\n",w);
 	w=w+8;
 	printf("And your weight after dessert: %d pounds!\n",w);
