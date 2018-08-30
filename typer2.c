@@ -2,15 +2,11 @@
 
 int main()
 {
-	char ch;
-
 	puts("Start typing");
 	puts("Press ~ then Enter to stop");
 
-	while(ch!='~')
-	{
-		ch=getchar();
-	}
+	while(getchar() != '~')
+	;
 	printf("Thanks!\n");
 	return(0);
 }
