@@ -5,14 +5,26 @@
 void dropBomb(void); /* prototype */
 void delay(void);
 
+int deaths;
+
 int main()
 {
 	char x;
 
-	printf("Press Enter to drop the bomb:");
-	x=getchar();
-	dropBomb();
-	printf("Key code %d used to drop bomb.\n",x);
+	deaths=0;
+	for(;;)
+	{
+		printf("Press ~ then Enter to quit\n");
+		printf("Press Enter to drop the bomb:");
+		x=getchar();
+		fflush(stdin);
+		if(x=='~')
+		{
+			break;
+		}
+		dropBomb();
+		printf("%d people killed!\n",deaths);
+	}
 	return(0);
 }
 
@@ -26,6 +38,7 @@ void dropBomb()
 		delay();
 	}
 	puts("        BOOM!");
+	deaths+=1500;
 }
 
 void delay()
@@ -35,6 +48,3 @@ void delay()
 	for(x=0;x<COUNT;x++)
 	;
 }
-
-
-
