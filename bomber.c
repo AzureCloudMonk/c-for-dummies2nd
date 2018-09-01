@@ -1,13 +1,18 @@
 #include <stdio.h>
 
+#define COUNT 20000000  /* 20,000,000 */
+
 void dropBomb(void); /* prototype */
+void delay(void);
 
 int main()
 {
+	char x;
+
 	printf("Press Enter to drop the bomb:");
-	getchar();
+	x=getchar();
 	dropBomb();
-	printf("Yikes!\n");
+	printf("Key code %d used to drop bomb.\n",x);
 	return(0);
 }
 
@@ -18,8 +23,18 @@ void dropBomb()
 	for(x=20;x>1;x--)
 	{
 		puts("          *");
+		delay();
 	}
 	puts("        BOOM!");
 }
+
+void delay()
+{
+	long int x;
+
+	for(x=0;x<COUNT;x++)
+	;
+}
+
 
 
